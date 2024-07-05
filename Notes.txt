@@ -1,0 +1,137 @@
+React Setup:  npx create-react-app appname
+
+<React.StrictMode>         --> Displays error immediately if exist
+    <App />
+</React.StrictMode>
+
+
+
+
+
+React ???
+
+    Library for UI development by JS and it was developed by FaceBook
+
+Why React ???
+
+    Normal DOM - Re-renders the full code in DOM if any update
+    But,,,,
+
+        Virtual DOM - It only update particular elements if we change anything and it wont re-renders the whole code 
+                        so it's LIGHT WEIGHTED and update faster 
+
+Installatiom ::
+
+    Download NodeJS - BackendJS Runtime environment
+    npm create vite@latest (react-app outdated..... so we use vite instead)
+
+
+
+Note *********************************************************************************************
+
+node_modules : packages,libraries,modules,dependencies for our project
+public : public assets
+src : MAIN folder(Bundled)
+
+Entry point -> (index.html) -> main.jsx 
+React works with Component
+App is root Component (UI code)
+
+
+Component Means Independent & Reusable code
+
+
+****************************************************************************************************
+
+
+1) Create Component 
+
+    function Header(){
+        return(
+            <div>
+                Hello React !!!
+            </div>
+        )
+    }
+    export default Header;
+
+
+2) Import Header in App(Root component)
+
+    import Header from ".Header"
+    function App() {
+        return(
+            <Header/>
+        );
+    }
+
+3) Use JS code
+
+    function Header(){
+        return(
+            <div>
+                { new Date().getFullYear() }   Hello React !!!
+            </div>
+        )
+    }
+    export default Header;
+
+4) function Header(){
+
+    const a = "Vasanth"
+
+        return(
+            <div>
+                { a }   Hello React !!!
+            </div>
+        )
+    }
+    export default Header;
+
+5) CSS Styling
+
+    External   -  index.css
+    
+    Modules    -  header.module.css  ->  .Header{ color: red; }  ->  import  ->   <h1 className={importname.Header}></h1>
+    
+    Inline     -    const styles = { color: "red"}
+
+                    return(
+                        <div style={styles}>
+                            { a }   Hello React !!!
+                        </div>
+                    )
+                    }
+                    export default Header;
+
+6) Props 
+
+    a)  create new component
+
+    b)  import new component
+        function App() {
+            return(
+                <component username = "vasanth" isLoggedin = {true}>
+            )
+        }
+        export default App;
+
+    c)  In new component
+        function component(props) {
+            if(props.isLoggedin)
+            {
+                return(
+                <h2> Hello {props.username} !!! </h2> 
+            )
+            }
+        }
+        export default component;
+
+7) Hooks
+
+    Hooks are added in React v16.8 
+    Hooks is for creating components without class
+    1) UseState -> useState() -> SimpleState Management -> Maintain local state
+    2) UseReducer -> useReducer() -> ComplexState Management -> Maintain local state
+        Reducer Which expose the dispatch methods
+    3) UseContext -> Maintain Global state -> Used in all components
