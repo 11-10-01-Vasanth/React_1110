@@ -1,12 +1,13 @@
 import UseState from "./UseState";
 import Vasanth from "./Header";
 import UseReducer from "./UseReducer";
+import ARUarray from "./ARUarray";
 
 function App() {
-  const userRole = 'user';
+  // const userRole = 'user';
   return (
     <>
-     <div>
+      {/* <div>
       {userRole === 'admin' ? (
         <h1>Welcome, Admin!</h1>
       ) : userRole === 'user' ? (
@@ -14,10 +15,11 @@ function App() {
       ) : (
         <h1>Welcome, Guest!</h1>
       )}
-    </div>
-      <UseState />
+    </div> */}
+      {/* <UseState />
       <Vasanth />
-      <UseReducer />
+      <UseReducer /> */}
+      <ARUarray></ARUarray>
     </>
   );
 }
